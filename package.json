@@ -1,19 +1,25 @@
 {
-  "name": "testing-react",
+  "name": "cypress-course",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:ikaro-souza/testing-react.git",
+  "repository": "git@github.com:ikaro-souza/cypress-course.git",
   "author": "ikaro-souza <ikarosouza00@outlook.com>",
   "license": "MIT",
   "scripts": {
     "cy:open": "./node_modules/.bin/cypress open",
-    "cy:run": "./node_modules/.bin/cypress run"
+    "cy:run": "./node_modules/.bin/cypress run",
+    "cy:update-snapshots": "yarn cy:run --env updateSnapshots=true",
+    "cy:report-tests": "yarn cy:run --reporter cypress-image-snapshot/reporter",
+    "cy:no-failure-tests": "yarn cy:run --env failOnSnapshotDiff=false"
   },
   "dependencies": {
-    "cypress": "^9.3.1",
     "prettier": "^2.5.1"
   },
   "devDependencies": {
+    "@types/cypress-image-snapshot": "^3.1.6",
+    "@types/node": "^17.0.17",
+    "cypress": "^9.3.1",
+    "cypress-image-snapshot": "^4.0.1",
     "typescript": "^4.5.5"
   }
 }
