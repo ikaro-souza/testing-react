@@ -15,6 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Install dependencies
+
       - name: Build application
         run: yarn build
 
@@ -22,6 +24,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Run locally
+      - name: Test components
         run: 'cd cypress-course && yarn cypress run-ct'
   # publish
