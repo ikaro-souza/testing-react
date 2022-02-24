@@ -1,25 +1,58 @@
 {
   "name": "cypress-course",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "git@github.com:ikaro-souza/cypress-course.git",
   "author": "ikaro-souza <ikarosouza00@outlook.com>",
   "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "5.0.0",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@cypress/react": "^5.12.3",
+    "@cypress/webpack-dev-server": "^1.8.1",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.3",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/cypress-image-snapshot": "^3.1.6",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^16.11.25",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "cypress": "9.5.0",
+    "cypress-image-snapshot": "^4.0.1",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.5"
+  },
   "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "cy:open": "./node_modules/.bin/cypress open",
     "cy:run": "./node_modules/.bin/cypress run",
     "cy:update-snapshots": "yarn cy:run --env updateSnapshots=true",
     "cy:report-tests": "yarn cy:run --reporter cypress-image-snapshot/reporter",
-    "cy:no-failure-tests": "yarn cy:run --env failOnSnapshotDiff=false"
+    "cy:no-failure-tests": "yarn cy:run --env failOnSnapshotDiff=false",
+    "eject": "react-scripts eject"
   },
-  "dependencies": {
-    "prettier": "^2.5.1"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "devDependencies": {
-    "@types/cypress-image-snapshot": "^3.1.6",
-    "@types/node": "^17.0.17",
-    "cypress": "^9.3.1",
-    "cypress-image-snapshot": "^4.0.1",
-    "typescript": "^4.5.5"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

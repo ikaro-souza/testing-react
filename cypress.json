@@ -10,5 +10,9 @@
   "requestTimeout": 5000,
   "responseTimeout": 5000,
   "video": false,
-  "failOnStatusCode": false
+  "failOnStatusCode": false,
+  "component": {
+    "testFiles": "integration/**/components/*.spec.{ts,tsx}",
+    "componentFolder": "cypress"
+  }
 }
